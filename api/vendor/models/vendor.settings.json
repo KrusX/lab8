@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Vendors",
+  "info": {
+    "name": "Vendor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "First_name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "Second_name": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true
+    },
+    "lots": {
+      "via": "vendor",
+      "collection": "lot"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Lots",
+  "info": {
+    "name": "Lot"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "Price": {
+      "type": "decimal",
+      "required": true
+    },
+    "vendor": {
+      "model": "vendor",
+      "via": "lots"
+    }
+  }
+}
